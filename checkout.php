@@ -143,5 +143,29 @@ if (isset($_POST["checkout"])) {
         </form>
     </div>
 </section>
+    
+<script>
+    // Fungsi untuk melakukan validasi form sebelum submit
+    function validateForm(event) {
+        // Mengambil nilai-nilai input dari form
+        var name = document.forms[0].name.value;
+        var telepon = document.forms[0].telepon.value;
+        var alamat = document.forms[0].alamat.value;
+        var metode = document.forms[0].metode.value;
+        
+        // Validasi input sesuai kebutuhan
+        if (name === "" || telepon === "" || alamat === "" || metode === "") {
+            event.preventDefault(); // Mencegah form untuk melakukan submit jika ada input yang kosong
+            alert("Harap lengkapi semua field pada form.");
+        } else if (isNaN(telepon) || telepon.length !== 12) {
+            event.preventDefault();
+            alert("Nomor telepon harus terdiri dari 12 digit angka.");
+        }
+    }
+
+    // Menghubungkan fungsi validateForm dengan event "submit" pada form
+    document.querySelector("form.confirm-form").addEventListener("submit", validateForm);
+</script>
+    
 </body>
 </html>
