@@ -187,8 +187,6 @@ if (isset($_POST["login"])) {
 
 <!-- dog and cat food banner section ends -->
 
-<!-- shop section starts  -->
-
 <section class="shop" id="shop">
 
     <h1 class="heading"> our <span> products </span> </h1>
@@ -226,8 +224,6 @@ if (isset($_POST["login"])) {
         </div>
 
 </section>
-
-<!-- shop section ends -->
 
 <section class="footer">
 
